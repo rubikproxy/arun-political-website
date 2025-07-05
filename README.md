@@ -1,5 +1,5 @@
-# Firebase Studio
+# BharatPulse
 
-This is a NextJS starter in Firebase Studio.
+This is a Next.js website for a political leader, built with Firebase Studio.
 
-To get started, take a look at src/app/page.tsx.
+It features a modern design, AI-powered policy summaries, and profiles of key political figures.
