@@ -137,15 +137,15 @@ export default function Home() {
               </div>
             </div>
             <div className="relative flex justify-center">
-                <div className="relative p-1 bg-gradient-to-tr from-primary to-secondary rounded-full">
-                  <div className="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-full blur-md opacity-50 animate-pulse"></div>
+                <div className="relative p-1 bg-gradient-to-tr from-primary to-secondary rounded-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-2xl blur-md opacity-50 animate-pulse"></div>
                   <Image
-                    src="https://placehold.co/600x600.png"
+                    src="https://placehold.co/600x750.png"
                     data-ai-hint="Rahul Gandhi professional"
                     width={600}
-                    height={600}
+                    height={750}
                     alt="Rahul Gandhi"
-                    className="relative mx-auto aspect-square overflow-hidden rounded-full object-cover shadow-2xl sm:w-full max-w-md"
+                    className="relative mx-auto overflow-hidden rounded-xl object-cover shadow-2xl sm:w-full max-w-md"
                   />
                 </div>
             </div>
