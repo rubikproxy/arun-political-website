@@ -15,13 +15,6 @@ export default function Footer() {
               For a progressive, secular, and united India.
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <h4 className="font-bold font-headline">Quick Links</h4>
-            <div className="flex gap-4">
-              <Link href="/about" className="text-muted-foreground hover:text-primary">About</Link>
-              <Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link>
-            </div>
-          </div>
           <div className="flex items-center space-x-4">
             <Link href="#" aria-label="Twitter" className="p-2 rounded-full hover:bg-accent">
               <Twitter className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
