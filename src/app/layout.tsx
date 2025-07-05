@@ -6,8 +6,8 @@ import Footer from '@/components/footer';
 import { Icons } from '@/components/icons';
 
 export const metadata: Metadata = {
-  title: 'BharatPulse',
-  description: 'A modern political platform for a new generation of leaders.',
+  title: 'Arunkumar Arangavalan | INC Leader, Vellore',
+  description: 'Official website of Arunkumar Arangavalan, Congress Party Leader, Vellore District, Anaikkattu Thoguthi.',
 };
 
 export default function RootLayout({
@@ -20,14 +20,14 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
         <div className="relative flex min-h-dvh flex-col bg-background">
           <div 
-            className="absolute inset-0 z-[-1]" 
+            className="absolute inset-0 z-[-1] opacity-70" 
             style={{
-              backgroundImage: 'linear-gradient(180deg, hsl(var(--primary)/0.05), transparent 40%, transparent 60%, hsl(var(--secondary)/0.05))'
+              backgroundImage: 'linear-gradient(160deg, hsl(var(--primary)/0.15) 0%, hsl(var(--background)) 30%, hsl(var(--background)) 70%, hsl(var(--secondary)/0.15) 100%)'
             }}
           />
           <div className="absolute inset-0 z-[-1] flex items-center justify-center opacity-[0.03] pointer-events-none">
