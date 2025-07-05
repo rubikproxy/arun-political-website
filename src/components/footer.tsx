@@ -19,8 +19,6 @@ export default function Footer() {
             <h4 className="font-bold font-headline">Quick Links</h4>
             <div className="flex gap-4">
               <Link href="/about" className="text-muted-foreground hover:text-primary">About</Link>
-              <Link href="/events" className="text-muted-foreground hover:text-primary">Events</Link>
-              <Link href="/media" className="text-muted-foreground hover:text-primary">Media</Link>
               <Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link>
             </div>
           </div>
