@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'manifesto.inc.in',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'inc.in',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

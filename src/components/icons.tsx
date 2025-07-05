@@ -13,5 +13,15 @@ export const Icons = {
       className={`${props.className}`}
     />
   ),
+  IncFooterLogo: (props: React.HTMLAttributes<HTMLDivElement>) => (
+    <Image
+      src="https://inc.in/static/images/logo_footer.jpg"
+      alt="Indian National Congress Footer Logo"
+      width={160}
+      height={52}
+      {...props}
+      className={`${props.className}`}
+    />
+  ),
   hand: Hand,
 };

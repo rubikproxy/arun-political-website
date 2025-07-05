@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link href="/" className="flex items-center gap-3">
-              <Icons.IncLogo className="h-12 w-auto" />
+              <Icons.IncFooterLogo className="h-12 w-auto" />
             </Link>
             <p className="text-center text-muted-foreground md:text-left max-w-xs">
               For a progressive, secular, and united India.
