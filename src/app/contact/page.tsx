@@ -21,10 +21,10 @@ export default function ContactPage() {
           <ContactForm />
         </div>
         <div className="lg:col-span-2 space-y-8">
-            <Card className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <Card className="group transition-all duration-300 hover:shadow-xl hover:border-primary/80 border border-transparent bg-card/60 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline text-2xl flex items-center gap-3">
-                        <Handshake className="h-8 w-8 text-primary" />
+                        <Handshake className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
                         Become a Volunteer
                     </CardTitle>
                 </CardHeader>
@@ -37,10 +37,10 @@ export default function ContactPage() {
                     </Button>
                 </CardContent>
             </Card>
-            <Card className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <Card className="group transition-all duration-300 hover:shadow-xl hover:border-primary/80 border border-transparent bg-card/60 backdrop-blur-sm">
                 <CardHeader>
                     <CardTitle className="font-headline text-2xl flex items-center gap-3">
-                        <Heart className="h-8 w-8 text-primary" />
+                        <Heart className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
                         Donate to the Cause
                     </CardTitle>
                 </CardHeader>

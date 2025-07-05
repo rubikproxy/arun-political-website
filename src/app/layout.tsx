@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth scroll-pt-20">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -27,7 +27,7 @@ export default function RootLayout({
           <div 
             className="absolute inset-0 z-[-1] opacity-70" 
             style={{
-              backgroundImage: 'linear-gradient(160deg, hsl(var(--primary)/0.15) 0%, hsl(var(--background)) 30%, hsl(var(--background)) 70%, hsl(var(--secondary)/0.15) 100%)'
+              backgroundImage: 'linear-gradient(160deg, hsl(var(--primary)/0.1) 0%, hsl(var(--background)) 30%, hsl(var(--background)) 70%, hsl(var(--secondary)/0.1) 100%)'
             }}
           />
           <div className="absolute inset-0 z-[-1] flex items-center justify-center opacity-[0.03] pointer-events-none">

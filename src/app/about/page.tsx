@@ -87,7 +87,7 @@ export default function AboutPage() {
         <h2 className="font-headline text-3xl font-bold text-center text-primary">What We Stand For</h2>
         <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
           {valuesData.map((value) => (
-            <Card key={value.title} className="text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <Card key={value.title} className="text-center transition-all duration-300 bg-card/60 backdrop-blur-sm border border-border/20 hover:border-primary/80 hover:shadow-primary/10 hover:shadow-xl hover:-translate-y-1">
               <CardHeader>
                 <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
                   {value.icon}

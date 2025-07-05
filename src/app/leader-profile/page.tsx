@@ -22,14 +22,17 @@ export default function LeaderProfilePage() {
     <div className="container mx-auto px-4 py-12 md:py-20">
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
         <div className="lg:col-span-1">
-          <Image
-            src="https://placehold.co/600x800.png"
-            data-ai-hint="male indian politician"
-            width={600}
-            height={800}
-            alt="Arunkumar Arangavalan"
-            className="rounded-xl object-cover shadow-2xl w-full h-auto"
-          />
+           <div className="relative p-1 bg-gradient-to-tr from-primary to-secondary rounded-xl">
+            <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-xl blur-lg opacity-40 animate-pulse"></div>
+            <Image
+              src="https://placehold.co/600x800.png"
+              data-ai-hint="male indian politician"
+              width={600}
+              height={800}
+              alt="Arunkumar Arangavalan"
+              className="relative rounded-xl object-cover shadow-2xl w-full h-auto"
+            />
+          </div>
         </div>
         <div className="lg:col-span-2 space-y-6">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-secondary sm:text-5xl">
@@ -63,15 +66,15 @@ export default function LeaderProfilePage() {
 
       <section id="achievements" className="mt-20">
         <h2 className="font-headline text-3xl font-bold text-center text-primary">My Work & Vision</h2>
-        <Card className="mt-12 shadow-xl">
+        <Card className="mt-12 shadow-xl bg-card/60 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="font-headline text-2xl">Key Accomplishments</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
               {achievements.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                <li key={index} className="flex items-start gap-4 p-4 border rounded-lg bg-background/50 transition-all hover:bg-muted/80 hover:border-primary/50">
+                  <CheckCircle className="h-8 w-8 text-green-500 mt-1 flex-shrink-0" />
                   <span className="text-lg text-muted-foreground">{item}</span>
                 </li>
               ))}

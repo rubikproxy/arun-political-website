@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Briefcase, Landmark, ShieldCheck, Vote } from "lucide-react";
+import { Briefcase, Landmark, ShieldCheck, Vote, Quote } from "lucide-react";
 
 
 const whyCongressData = [
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
               <div className="space-y-4">
-                <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl xl:text-7xl/none">
+                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none animate-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
                   A New Dawn for India
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
@@ -75,14 +75,17 @@ export default function Home() {
               </div>
             </div>
             <div className="relative flex justify-center">
-                <Image
-                  src="https://placehold.co/600x600.png"
-                  data-ai-hint="Rahul Gandhi professional"
-                  width={600}
-                  height={600}
-                  alt="Rahul Gandhi"
-                  className="mx-auto aspect-square overflow-hidden rounded-full object-cover shadow-2xl sm:w-full max-w-md"
-                />
+                <div className="relative p-1 bg-gradient-to-tr from-primary to-secondary rounded-full">
+                  <div className="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-full blur-md opacity-50 animate-pulse"></div>
+                  <Image
+                    src="https://placehold.co/600x600.png"
+                    data-ai-hint="Rahul Gandhi professional"
+                    width={600}
+                    height={600}
+                    alt="Rahul Gandhi"
+                    className="relative mx-auto aspect-square overflow-hidden rounded-full object-cover shadow-2xl sm:w-full max-w-md"
+                  />
+                </div>
             </div>
           </div>
         </div>
@@ -91,14 +94,17 @@ export default function Home() {
       <section id="local-leader" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
-            <Image
-              src="https://placehold.co/600x600.png"
-              data-ai-hint="male indian politician formal"
-              width={600}
-              height={600}
-              alt="Arunkumar Arangavalan"
-              className="mx-auto aspect-square overflow-hidden rounded-full object-cover shadow-2xl"
-            />
+            <div className="relative p-1 bg-gradient-to-tr from-secondary to-primary rounded-full">
+              <div className="absolute -inset-1 bg-gradient-to-tr from-secondary to-primary rounded-full blur-md opacity-50 animate-pulse"></div>
+              <Image
+                src="https://placehold.co/600x600.png"
+                data-ai-hint="male indian politician formal"
+                width={600}
+                height={600}
+                alt="Arunkumar Arangavalan"
+                className="relative mx-auto aspect-square overflow-hidden rounded-full object-cover shadow-2xl"
+              />
+            </div>
             <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
               <div className="space-y-2">
                 <p className="text-primary font-semibold tracking-wide">LEADERSHIP IN VELLORE</p>
@@ -130,7 +136,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {whyCongressData.map((item) => (
-              <Card key={item.title} className="text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <Card key={item.title} className="text-center transition-all duration-300 bg-card/60 backdrop-blur-sm border border-border/20 hover:border-primary/80 hover:shadow-primary/10 hover:shadow-xl hover:-translate-y-1">
                  <CardHeader className="items-center">
                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                       {item.icon}
@@ -159,9 +165,10 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                   <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col justify-between shadow-lg">
-                      <CardContent className="p-6 text-lg font-body">
-                        <p>"{testimonial.quote}"</p>
+                    <Card className="h-full flex flex-col justify-between shadow-lg bg-card/80 border-t-4 border-primary/50">
+                      <CardContent className="p-6 text-lg font-body relative">
+                        <Quote className="absolute top-4 left-4 h-10 w-10 text-primary/20" />
+                        <p className="pt-8 pl-4">"{testimonial.quote}"</p>
                       </CardContent>
                       <CardHeader className="flex flex-row items-center gap-4 border-t pt-6">
                         <Avatar>
