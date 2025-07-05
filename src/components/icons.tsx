@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { Hand } from "lucide-react";
 
 export const Icons = {
   logo: (props: SVGProps<SVGSVGElement>) => (
@@ -17,4 +18,5 @@ export const Icons = {
       <path d="M2 12l10 5 10-5" />
     </svg>
   ),
+  hand: Hand,
 };
