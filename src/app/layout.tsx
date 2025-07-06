@@ -6,8 +6,20 @@ import Footer from '@/components/footer';
 import { Icons } from '@/components/icons';
 
 export const metadata: Metadata = {
-  title: 'Arunkumar Arangavalan | INC Leader, Vellore',
-  description: 'Official website of Arunkumar Arangavalan, Congress Party Leader, Vellore District, Anaikkattu Thoguthi.',
+  title: 'Arunkumar Arangavalan (ArunKumar Arangavelan) | Youth Wing Leader, Anaikattu',
+  description: 'Official website of Arunkumar Arangavalan, the National Congress Youth Wing Leader for the Anaikkattu constituency in Vellore. Connect and support the vision for a progressive future.',
+  keywords: [
+    "Arunkumar Arangavalan",
+    "ArunKumar Arangavelan",
+    "Indian National Congress",
+    "INC",
+    "Youth Wing Leader",
+    "Anaikattu constituency",
+    "Anaikattu",
+    "Vellore",
+    "Congress Party Leader",
+    "Political Leader Tamil Nadu",
+  ],
 };
 
 export default function RootLayout({

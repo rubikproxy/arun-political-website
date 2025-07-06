@@ -123,7 +123,7 @@ export default function Home() {
                 Arunkumar Arangavalan
               </h2>
               <p className="text-lg font-semibold text-primary/90">
-                Congress Leader, Vellore, Anaikkattu Thoguthi
+                National Congress Youth Wing Leader, Anaikkattu Constituency
               </p>
               <p className="text-lg text-muted-foreground max-w-xl text-balance">
                 A dedicated public servant committed to the progress of Vellore. My mission is to foster inclusive growth, empower our youth, and ensure every voice in Anaikkattu is heard and valued.

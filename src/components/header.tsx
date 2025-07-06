@@ -12,7 +12,7 @@ export default function Header() {
           <Icons.IncLogo className="h-12 w-auto" />
           <div className="flex flex-col">
             <span className="font-bold font-headline text-primary">Arunkumar Arangavalan</span>
-            <span className="text-xs text-muted-foreground">INC Leader, Vellore</span>
+            <span className="text-xs text-muted-foreground">Youth Wing Leader, Anaikattu</span>
           </div>
         </Link>
         
