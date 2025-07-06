@@ -126,7 +126,7 @@ export default function Home() {
                 National Congress Youth Wing Leader, Anaikkattu Constituency
               </p>
               <p className="text-lg text-muted-foreground max-w-xl text-balance">
-                A dedicated public servant committed to the progress of Vellore. My mission is to foster inclusive growth, empower our youth, and ensure every voice in Anaikkattu is heard and valued.
+                Inspired by the leadership of Rahul Gandhi and the core principles of the Indian National Congress, Arunkumar is a dedicated public servant. As the Youth Wing Leader for the Anaikkattu constituency, he champions the party's ideology of social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild>
