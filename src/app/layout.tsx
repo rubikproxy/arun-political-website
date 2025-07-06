@@ -1,16 +1,33 @@
 import type {Metadata} from 'next';
+import { Poppins, Merriweather } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Icons } from '@/components/icons';
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['400', '500', '700']
+});
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-merriweather',
+  weight: ['400', '700']
+});
+
 export const metadata: Metadata = {
-  title: 'Arunkumar Arangavelan | Youth Wing Leader, Anaikattu',
-  description: 'Official website of Arunkumar Arangavelan, the National Congress Youth Wing Leader for the Anaikkattu constituency in Vellore. Connect and support the vision for a progressive future.',
+  title: {
+    default: 'Arunkumar Arangavelan | INC Youth Wing Leader, Anaikattu',
+    template: `%s | Arunkumar Arangavelan`,
+  },
+  description: 'Official website of Arunkumar Arangavelan, the Indian National Congress Youth Wing Leader for the Anaikkattu constituency in Vellore. Connect and support the vision for a progressive future, inspired by Rahul Gandhi.',
   keywords: [
     "Arunkumar Arangavelan",
-    "ArunKumar Arangavelan",
     "Indian National Congress",
     "INC",
     "Youth Wing Leader",
@@ -19,7 +36,41 @@ export const metadata: Metadata = {
     "Vellore",
     "Congress Party Leader",
     "Political Leader Tamil Nadu",
+    "Rahul Gandhi",
   ],
+  openGraph: {
+    title: 'Arunkumar Arangavelan | INC Youth Wing Leader, Anaikattu',
+    description: 'Official website of Arunkumar Arangavelan, INC Youth Wing Leader for the Anaikkattu constituency.',
+    url: 'https://www.your-domain.com',
+    siteName: 'Arunkumar Arangavelan Official Website',
+    images: [
+      {
+        url: 'https://i.imgur.com/Y1hTTxE.jpeg',
+        width: 800,
+        height: 800,
+        alt: 'Arunkumar Arangavelan',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arunkumar Arangavelan | INC Youth Wing Leader, Anaikattu',
+    description: 'Official website of Arunkumar Arangavelan, INC Youth Wing Leader for the Anaikkattu constituency.',
+    images: ['https://i.imgur.com/Y1hTTxE.jpeg'],
+  },
 };
 
 export default function RootLayout({
@@ -28,12 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth scroll-pt-20">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`!scroll-smooth scroll-pt-20 ${poppins.variable} ${merriweather.variable}`}>
       <body className="font-body antialiased">
         <div className="relative flex min-h-dvh flex-col bg-background">
           <div 

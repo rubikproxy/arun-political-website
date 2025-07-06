@@ -81,7 +81,7 @@ export default function Home() {
                   <Image
                     src={leaderProfile.image}
                     data-ai-hint={leaderProfile.imageHint}
-                    alt={leaderProfile.name}
+                    alt={leaderProfile.imageAlt}
                     width={800}
                     height={800}
                     className="object-cover object-top w-full h-full"
@@ -176,7 +176,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-4 mt-auto pt-6 border-t border-foreground/10">
                   <Avatar className="h-14 w-14 border-2 border-primary">
-                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                    <AvatarImage src={testimonial.avatar} alt={testimonial.avatarAlt} data-ai-hint={testimonial.avatarHint} />
                     <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>
@@ -204,7 +204,7 @@ export default function Home() {
                       <Image
                         src={post.imageUrl}
                         data-ai-hint={post.hint}
-                        alt={`Instagram post ${index + 1}`}
+                        alt={post.alt}
                         fill
                         className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                       />

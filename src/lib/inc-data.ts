@@ -169,11 +169,12 @@ export const incData = {
     },
     "leaderProfile": {
       "image": "https://i.imgur.com/Y1hTTxE.jpeg",
+      "imageAlt": "Headshot of Arunkumar Arangavelan, INC Youth Wing Leader of Anaikattu.",
       "imageHint": "male indian politician",
       "subtitle": "Voice in Vellore",
       "name": "Arunkumar Arangavelan",
       "title": "Youth Wing Leader Of Anaikattu",
-      "description": "Arunkumar Arangavelan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.",
+      "description": "Arunkumar Arangavelan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikkattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.",
       "buttons": {
         "contact": "Contact Me",
         "instagram": "Follow on Instagram"
@@ -194,6 +195,7 @@ export const incData = {
           "location": "Vellore",
           "quote": "The Congress party has always stood for the unity and integrity of our nation. We need their experience to guide us.",
           "avatar": "https://placehold.co/100x100.png",
+          "avatarAlt": "Avatar of Priya S.",
           "avatarHint": "indian woman"
         },
         {
@@ -201,6 +203,7 @@ export const incData = {
           "location": "Anaikattu",
           "quote": "Arunkumar ji's work in our thoguthi is commendable. He is always accessible and works tirelessly for our welfare.",
           "avatar": "https://placehold.co/100x100.png",
+          "avatarAlt": "Avatar of Amit Kumar.",
           "avatarHint": "indian man"
         },
         {
@@ -208,6 +211,7 @@ export const incData = {
           "location": "Gudiyatham",
           "quote": "Rahul Gandhi's vision for an inclusive India gives me hope for a better, more harmonious future for my children.",
           "avatar": "https://placehold.co/100x100.png",
+          "avatarAlt": "Avatar of Fatima B.",
           "avatarHint": "indian woman professional"
         }
       ]
@@ -218,10 +222,10 @@ export const incData = {
       "instagramUrl": "https://www.instagram.com/arunkumar_arangavelan_inc",
       "buttonText": "Follow @arunkumar_arangavelan_inc",
       "posts": [
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "leader interacting crowd" },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "social service activity" },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "inaugurating project" },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "public rally speech" }
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "leader interacting crowd", "alt": "Arunkumar Arangavelan speaking with a crowd of supporters." },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "social service activity", "alt": "Arunkumar Arangavelan participating in a local social service event." },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "inaugurating project", "alt": "Arunkumar Arangavelan at a project inauguration ceremony in Anaikattu." },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "public rally speech", "alt": "Arunkumar Arangavelan delivering a speech at a public rally." }
       ]
     }
   }
