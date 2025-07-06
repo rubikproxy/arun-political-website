@@ -75,21 +75,12 @@ const principleIcons: { [key: string]: React.ReactNode } = {
 };
 
 const pillarIcons: { [key: string]: React.ReactNode } = {
-  "Yuva Nyay (Youth Justice)": <GraduationCap className="h-6 w-6 mr-3" />,
-  "Naari Nyay (Women Justice)": <Heart className="h-6 w-6 mr-3" />,
-  "Kisaan Nyay (Farmers Justice)": <Sprout className="h-6 w-6 mr-3" />,
-  "Shramik Nyay (Workers Justice)": <HardHat className="h-6 w-6 mr-3" />,
-  "Hissedari Nyay (Equity Justice)": <PieChart className="h-6 w-6 mr-3" />,
+  "Yuva Nyay (Youth Justice)": <GraduationCap className="h-6 w-6 mr-3 text-primary" />,
+  "Naari Nyay (Women Justice)": <Heart className="h-6 w-6 mr-3 text-primary" />,
+  "Kisaan Nyay (Farmers Justice)": <Sprout className="h-6 w-6 mr-3 text-primary" />,
+  "Shramik Nyay (Workers Justice)": <HardHat className="h-6 w-6 mr-3 text-primary" />,
+  "Hissedari Nyay (Equity Justice)": <PieChart className="h-6 w-6 mr-3 text-primary" />,
 };
-
-const otherPolicyIcons: { [key: string]: React.ReactNode } = {
-  "Health": <HeartPulse className="h-6 w-6 text-primary" />,
-  "Education": <BookOpen className="h-6 w-6 text-primary" />,
-  "Religious and Linguistic Minorities": <Users className="h-6 w-6 text-primary" />,
-  "Senior Citizens, Disabilities, LGBTQIA+": <Accessibility className="h-6 w-6 text-primary" />,
-  "Sports": <Trophy className="h-6 w-6 text-primary" />,
-}
-
 
 export default function Home() {
   const { Ideology, Principles, Policies } = incData.IndianNationalCongress;
@@ -97,21 +88,20 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10 z-0"></div>
-        <div className="container px-4 md:px-6 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+      <section id="home" className="w-full py-20 md:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="space-y-6">
               <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter">
                 <span className="animate-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
-                  Vision for a Just India
+                  A New Vision for India
                 </span>
               </h1>
               <p className="max-w-2xl text-lg md:text-xl text-muted-foreground">
-                Led by the inspiring vision of <span className="font-bold text-secondary">Rahul Gandhi</span>, we are committed to forging a future of justice, equality, and prosperity for every Indian.
+                Under the leadership of <span className="font-bold text-secondary">Rahul Gandhi</span>, the Indian National Congress is dedicated to building a future of justice, equality, and prosperity for every citizen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="group text-lg bg-gradient-to-r from-primary to-orange-400 text-white shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1">
+                <Button asChild size="lg" className="group text-lg">
                   <Link href="#about-inc">
                     Explore Our Vision
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -122,16 +112,14 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative flex items-center justify-center h-[400px] lg:h-[600px]">
-              <div className="absolute w-full h-full bg-secondary/20 rounded-full blur-3xl -translate-x-10"></div>
-              <div className="absolute w-full h-full bg-primary/20 rounded-full blur-3xl translate-x-10"></div>
+            <div className="relative flex justify-center">
               <Image
-                src="https://placehold.co/600x750.png"
-                data-ai-hint="Rahul Gandhi professional portrait"
+                src="https://placehold.co/600x600.png"
+                data-ai-hint="rahul gandhi portrait"
                 alt="Rahul Gandhi"
-                width={500}
-                height={700}
-                className="object-contain object-center drop-shadow-2xl z-10"
+                width={600}
+                height={600}
+                className="rounded-full object-cover shadow-2xl shadow-primary/20"
                 priority
               />
             </div>
@@ -140,9 +128,20 @@ export default function Home() {
       </section>
       
       {/* Local Leader Section */}
-      <section id="leader-profile" className="w-full py-24 lg:py-32 bg-background">
+      <section id="leader-profile" className="w-full py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 relative h-[500px] lg:h-[600px] flex items-center justify-center">
+               <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-3xl blur-2xl opacity-50"></div>
+               <Image
+                src="https://placehold.co/600x800.png"
+                data-ai-hint="male indian politician"
+                alt="Arunkumar Arangavalan"
+                width={500}
+                height={700}
+                className="object-cover object-top rounded-3xl shadow-2xl relative"
+              />
+            </div>
             <div className="lg:col-span-7 space-y-6">
               <p className="text-primary font-semibold tracking-wide uppercase">Your Leader in Vellore</p>
               <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-secondary">
@@ -169,48 +168,38 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="lg:col-span-5 relative h-[500px] lg:h-[600px]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-secondary/30 rounded-full blur-3xl opacity-60"></div>
-              <Image
-                src="https://placehold.co/600x800.png"
-                data-ai-hint="male indian politician"
-                alt="Arunkumar Arangavalan"
-                layout="fill"
-                className="object-cover object-top rounded-3xl shadow-2xl [clip-path:polygon(0_0,_100%_10%,_100%_100%,_0_90%)]"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* About INC Section */}
-      <section id="about-inc" className="w-full py-24 lg:py-32 bg-muted/30">
+      <section id="about-inc" className="w-full py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter text-secondary sm:text-5xl">
-              Our Vision for India
-            </h1>
+            <h2 className="font-headline text-4xl font-bold tracking-tighter text-secondary sm:text-5xl">
+              Our Vision for a Just India
+            </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-              Rooted in a legacy of service, the Indian National Congress is committed to building a just, equitable, and prosperous future for every citizen.
+              Rooted in a legacy of service, the Indian National Congress is committed to building an equitable and prosperous future for every citizen.
             </p>
           </div>
 
-          <Card className="mb-20 shadow-xl bg-card/80 backdrop-blur-sm border-2 border-primary/20">
+          <Card className="mb-20 shadow-xl bg-muted/20 border-border">
             <CardHeader>
-              <CardTitle className="font-headline text-3xl text-center text-primary">Our Objective</CardTitle>
+              <CardTitle className="font-headline text-3xl text-center text-primary">Our Core Objective</CardTitle>
             </CardHeader>
             <CardContent className="text-center text-xl text-muted-foreground relative px-8 pb-8">
-              <Quote className="absolute top-0 left-6 h-12 w-12 text-primary/20" />
+              <Quote className="absolute top-0 left-6 h-12 w-12 text-primary/10" />
               <p className="pt-8">"{Principles.Objective}"</p>
-              <Quote className="absolute bottom-0 right-6 h-12 w-12 text-primary/20 transform rotate-180" />
+              <Quote className="absolute bottom-0 right-6 h-12 w-12 text-primary/10 transform rotate-180" />
             </CardContent>
           </Card>
 
           <div id="values" className="mb-20">
-            <h2 className="font-headline text-3xl font-bold text-center text-primary mb-12">Our Core Principles</h2>
+            <h3 className="font-headline text-3xl font-bold text-center text-primary mb-12">Founding Principles</h3>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {Ideology.CorePrinciples.map((principle) => (
-                <Card key={principle.Name} className="text-center p-6 transition-all duration-300 bg-card/60 backdrop-blur-sm border-0 shadow-lg hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2">
+                <Card key={principle.Name} className="text-center p-6 transition-all duration-300 bg-card border-border shadow-md hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
                     {principleIcons[principle.Name]}
                   </div>
@@ -223,25 +212,28 @@ export default function Home() {
 
           <div id="nyay-patra">
             <div className="text-center mb-12">
-              <h2 className="font-headline text-3xl font-bold text-primary">{Policies.Manifesto}</h2>
+              <h3 className="font-headline text-3xl font-bold text-primary">{Policies.Manifesto}</h3>
               <p className="mx-auto mt-2 max-w-2xl text-lg text-muted-foreground">
                 Our solemn promise to the people of India, built on five pillars of justice.
               </p>
             </div>
             <Tabs defaultValue={Policies.PillarsOfJustice[0].Name} className="w-full max-w-4xl mx-auto">
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 h-auto">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto">
                 {Policies.PillarsOfJustice.map((pillar) => (
-                  <TabsTrigger key={pillar.Name} value={pillar.Name} className="py-3 text-base flex-col h-full">
-                    {pillarIcons[pillar.Name]}
+                  <TabsTrigger key={pillar.Name} value={pillar.Name} className="py-3 text-sm flex-col h-full data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:shadow-none">
+                     {pillarIcons[pillar.Name]}
                     <span>{pillar.Name.split('(')[0]}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
               {Policies.PillarsOfJustice.map((pillar) => (
                 <TabsContent key={pillar.Name} value={pillar.Name}>
-                  <Card className="mt-6 border-primary/20">
+                  <Card className="mt-6 border-primary/20 shadow-lg">
                     <CardHeader>
-                       <CardTitle className="font-headline text-2xl text-primary">{pillar.Name}</CardTitle>
+                       <CardTitle className="font-headline text-2xl text-primary flex items-center">
+                         {pillarIcons[pillar.Name]}
+                         <span>{pillar.Name}</span>
+                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-4">
@@ -262,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="w-full py-24 lg:py-32 bg-background">
+      <section id="achievements" className="w-full py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">My Work for Anaikkattu</h2>
@@ -270,7 +262,7 @@ export default function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {achievements.map((item, index) => (
-              <Card key={index} className="flex items-start gap-4 p-6 rounded-2xl bg-muted/50 transition-all hover:bg-muted hover:shadow-lg hover:-translate-y-1">
+              <Card key={index} className="flex items-start gap-4 p-6 rounded-2xl bg-background shadow-md transition-all hover:border-primary/50 hover:shadow-lg hover:-translate-y-1">
                 <div className="flex-shrink-0 mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
                   <CheckCircle className="h-6 w-6 text-green-600" />
                 </div>
@@ -282,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="w-full py-24 lg:py-32 bg-muted/30">
+      <section id="testimonials" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-center text-secondary mb-12">
             Voices of Support
@@ -295,7 +287,7 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2 h-full">
-                    <Card className="h-full flex flex-col justify-between shadow-lg bg-card/80 backdrop-blur-sm border-0 rounded-2xl overflow-hidden">
+                    <Card className="h-full flex flex-col justify-between shadow-lg bg-card border-border rounded-2xl overflow-hidden">
                       <CardContent className="p-6 text-lg font-body relative flex-grow">
                         <Quote className="absolute top-4 left-4 h-16 w-16 text-primary/10" />
                         <p className="pt-12 pl-4 italic text-muted-foreground">"{testimonial.quote}"</p>
@@ -322,7 +314,7 @@ export default function Home() {
       </section>
       
       {/* Instagram Feed */}
-      <section id="instagram-feed" className="w-full py-24 lg:py-32">
+      <section id="instagram-feed" className="w-full py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
           <h2 className="font-headline text-3xl font-bold text-center text-primary mb-12">Connect on Instagram</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
