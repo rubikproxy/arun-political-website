@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Landmark,
@@ -99,42 +99,41 @@ export default function Home() {
       </section>
 
       {/* Leader Profile Section */}
-      <section id="leader-profile" className="w-full py-24 lg:py-32 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at top left, hsl(var(--primary)/0.5), transparent 40%), radial-gradient(circle at bottom right, hsl(var(--secondary)/0.5), transparent 40%)' }}></div>
-        <div className="container px-4 md:px-6 relative z-10">
+      <section id="leader-profile" className="w-full py-24 lg:py-32 bg-background">
+        <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute -inset-2.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-1000 animate-glow"></div>
+            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-full blur-3xl opacity-50"></div>
               <Image
                 src="https://placehold.co/800x800.png"
                 data-ai-hint="male indian politician"
                 alt="Arunkumar Arangavalan"
                 width={800}
                 height={800}
-                className="relative object-cover object-top rounded-full shadow-2xl w-full max-w-md mx-auto aspect-square"
+                className="relative object-cover object-top rounded-full shadow-xl w-full max-w-md mx-auto aspect-square"
               />
             </div>
-            <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-primary font-bold tracking-widest uppercase">Your Voice in Vellore</p>
-              <h2 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-secondary">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-secondary">
                 Arunkumar Arangavalan
               </h2>
-              <p className="text-xl md:text-2xl font-semibold text-primary/90">
+              <p className="text-lg font-semibold text-primary/90">
                 Congress Leader, Vellore, Anaikkattu Thoguthi
               </p>
               <p className="text-lg text-muted-foreground max-w-xl text-balance">
                 A dedicated public servant committed to the progress of Vellore. My mission is to foster inclusive growth, empower our youth, and ensure every voice in Anaikkattu is heard and valued.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild size="lg">
+                <Button asChild>
                   <Link href="/contact">
-                    <MessageCircle className="mr-2 h-5 w-5" />
+                    <MessageCircle />
                     Contact Me
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild variant="outline">
                   <Link href="https://www.instagram.com/" target="_blank">
-                    <Instagram className="mr-2 h-5 w-5" />
+                    <Instagram />
                     Follow on Instagram
                   </Link>
                 </Button>
@@ -157,18 +156,18 @@ export default function Home() {
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Card className="mb-20 shadow-xl bg-card rounded-2xl overflow-hidden">
+            <Card className="max-w-4xl mx-auto shadow-xl bg-card rounded-2xl overflow-hidden border-0">
                 <CardContent className="relative text-center text-lg md:text-xl text-foreground p-10 md:p-16">
-                    <span className="absolute -top-2 left-8 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">“</span>
-                    <p className="relative z-10 text-balance max-w-4xl mx-auto">
+                    <span className="absolute top-4 left-6 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">“</span>
+                    <p className="relative z-10 text-balance">
                         {Principles.Objective}
                     </p>
-                    <span className="absolute -bottom-12 right-8 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">”</span>
+                    <span className="absolute bottom-[-3rem] right-6 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">”</span>
                 </CardContent>
             </Card>
           </div>
 
-          <div id="values" className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div id="values" className="animate-fade-in-up mt-24" style={{ animationDelay: '0.4s' }}>
             <h3 className="font-headline text-3xl font-bold text-center text-primary mb-12">Founding Principles</h3>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
               {Ideology.CorePrinciples.map((principle, i) => (
@@ -186,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="w-full py-24 lg:py-32 bg-muted/30">
+      <section id="testimonials" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-secondary sm:text-6xl">Voices of Support</h2>
@@ -194,7 +193,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="flex flex-col bg-background p-8 rounded-2xl shadow-xl hover:shadow-primary/20 transition-all duration-300 h-full transform hover:-translate-y-2 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
+              <div key={index} className="flex flex-col bg-muted/30 p-8 rounded-2xl shadow-lg hover:shadow-primary/20 transition-all duration-300 h-full transform hover:-translate-y-2 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
                 <Quote className="h-10 w-10 text-primary/80 mb-6" />
                 <p className="text-lg text-foreground/90 flex-grow text-balance mb-6">
                   {testimonial.quote}
@@ -216,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* Connect Section */}
-      <section id="connect" className="w-full py-24 lg:py-32 bg-background">
+      <section id="connect" className="w-full py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 animate-fade-in-up">
               <h2 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-6xl">Connect With Us</h2>
