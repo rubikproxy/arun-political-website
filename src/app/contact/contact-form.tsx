@@ -28,8 +28,13 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
+  mobile: z.string().regex(/^[6-9]\d{9}$/, {
+    message: "Please enter a valid 10-digit Indian mobile number.",
+  }),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
+  }).max(500, {
+    message: "Message cannot be longer than 500 characters."
   }),
 });
 
@@ -53,6 +58,7 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      mobile: "",
       message: "",
     },
   });
@@ -126,6 +132,19 @@ export function ContactForm() {
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
                     <Input type="email" placeholder="your.email@example.com" {...field} autoComplete="email" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="mobile"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Mobile Number</FormLabel>
+                  <FormControl>
+                    <Input type="tel" placeholder="Your 10-digit mobile number" {...field} autoComplete="tel" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
