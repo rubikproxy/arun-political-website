@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { incData } from "@/lib/inc-data";
+import { LeaderProfileSlider } from "./leader-profile-slider";
 
 const testimonials = [
   {
@@ -66,7 +67,7 @@ export default function Home() {
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://manifesto.inc.in/images/nextImageExportOptimizer/inc-leaders-header-opt-1920.WEBP"
+            src="https://inc.in/static/images/home/banner-7-web.png"
             alt="INC Leaders"
             fill
             className="object-cover"
@@ -103,18 +104,11 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-full blur-3xl opacity-50"></div>
-              <Image
-                src="https://placehold.co/800x800.png"
-                data-ai-hint="male indian politician"
-                alt="Arunkumar Arangavalan"
-                width={800}
-                height={800}
-                className="relative object-cover object-top rounded-full shadow-xl w-full max-w-md mx-auto aspect-square"
-              />
+               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-full blur-3xl opacity-50"></div>
+               <LeaderProfileSlider />
             </div>
             <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <p className="text-primary font-bold tracking-widest uppercase">Your Voice in Vellore</p>
+              <p className="text-primary font-bold tracking-widest uppercase">Voice in Vellore</p>
               <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-secondary">
                 Arunkumar Arangavalan
               </h2>
@@ -132,7 +126,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href="https://www.instagram.com/" target="_blank">
+                  <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank">
                     <Instagram />
                     Follow on Instagram
                   </Link>
@@ -224,7 +218,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {instaPosts.map((post, index) => (
-                    <Link href="https://www.instagram.com/" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
+                    <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
                       <Image
                         src={post.imageUrl}
                         data-ai-hint={post.hint}
@@ -240,9 +234,9 @@ export default function Home() {
               </div>
               <div className="mt-8 text-center">
                    <Button asChild variant="outline" size="lg">
-                    <Link href="https://www.instagram.com/" target="_blank">
+                    <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank">
                       <Instagram className="mr-2 h-5 w-5" />
-                      Follow @Arunkumar_INC
+                      Follow @arunkumar_arangavalan_inc
                     </Link>
                   </Button>
               </div>
