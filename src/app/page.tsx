@@ -264,9 +264,9 @@ export default function Home() {
       {/* Community Section */}
       <section id="community" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-5 gap-16">
-            <div className="lg:col-span-3 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h2 className="font-headline text-4xl font-bold tracking-tighter text-secondary mb-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-secondary mb-8">
                 Voices of Support
               </h2>
               <Carousel
@@ -276,39 +276,42 @@ export default function Home() {
                 }}
                 className="w-full"
               >
-                <CarouselContent>
+                <CarouselContent className="-ml-4">
                   {testimonials.map((testimonial, index) => (
-                    <CarouselItem key={index}>
-                      <div className="p-1">
-                        <Card className="glass-effect border-0 rounded-2xl shadow-lg overflow-hidden h-full flex flex-col">
-                           <CardContent className="p-6 text-lg font-body relative flex-grow">
-                             <Quote className="absolute top-4 left-4 h-12 w-12 text-primary/20" />
-                             <p className="pt-8 pl-4 italic text-muted-foreground text-balance">"{testimonial.quote}"</p>
+                    <CarouselItem key={index} className="pl-4 basis-full md:basis-1/1">
+                        <Card className="rounded-xl shadow-md overflow-hidden h-full bg-card border">
+                           <CardContent className="p-6 text-lg font-body relative flex flex-col justify-between min-h-[280px]">
+                            <div>
+                              <span className="absolute top-2 left-4 font-serif text-8xl text-primary opacity-10 select-none">”</span>
+                              <p className="relative z-10 text-muted-foreground text-base md:text-lg text-balance pt-10">
+                                {testimonial.quote}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-4 mt-6">
+                              <Avatar className="h-12 w-12 border-2 border-primary">
+                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                                <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                              </Avatar>
+                              <div>
+                                <p className="font-bold text-md text-secondary">{testimonial.name}</p>
+                                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                              </div>
+                            </div>
                            </CardContent>
-                           <CardHeader className="flex flex-row items-center gap-4 border-t border-white/10 pt-4 bg-white/5">
-                             <Avatar className="h-14 w-14 border-2 border-primary">
-                               <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
-                               <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                             </Avatar>
-                             <div>
-                               <p className="font-bold text-lg text-secondary">{testimonial.name}</p>
-                               <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                             </div>
-                           </CardHeader>
                          </Card>
-                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-[-50px]" />
-                <CarouselNext className="right-[-50px]" />
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
               </Carousel>
             </div>
-            <div className="lg:col-span-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <h2 className="font-headline text-4xl font-bold text-primary mb-12">Connect With Us</h2>
+            
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-8">Connect With Us</h2>
               <div className="grid grid-cols-2 gap-4">
                 {instaPosts.map((post, index) => (
-                  <Link href="https://www.instagram.com/" target="_blank" key={index} className="group relative overflow-hidden rounded-2xl shadow-lg aspect-square">
+                  <Link href="https://www.instagram.com/" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
                     <Image
                       src={post.imageUrl}
                       data-ai-hint={post.hint}
@@ -316,23 +319,22 @@ export default function Home() {
                       fill
                       className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col items-center justify-end p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Instagram className="h-8 w-8 mb-2" />
-                      <p className="text-xs text-center">View on Instagram</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Instagram className="h-8 w-8" />
                     </div>
                   </Link>
                 ))}
-                <div className="col-span-2 mt-2 p-6 glass-effect border-0 rounded-2xl text-center">
-                    <h3 className="font-headline text-secondary text-xl">Follow Our Journey</h3>
-                    <p className="text-muted-foreground mt-2 mb-4 text-sm text-balance">Stay updated with the latest news and events.</p>
-                     <Button asChild variant="outline" className="bg-transparent hover:bg-white/10">
+              </div>
+              <div className="mt-6 text-center">
+                    <h3 className="font-headline text-secondary text-lg">Follow Our Journey</h3>
+                    <p className="text-muted-foreground mt-1 mb-3 text-sm text-balance">Stay updated with the latest news and events.</p>
+                     <Button asChild variant="outline">
                       <Link href="https://www.instagram.com/" target="_blank">
-                        <Instagram className="mr-2 h-5 w-5" />
+                        <Instagram className="mr-2 h-4 w-4" />
                         @Arunkumar_INC
                       </Link>
                     </Button>
                 </div>
-              </div>
             </div>
           </div>
         </div>
