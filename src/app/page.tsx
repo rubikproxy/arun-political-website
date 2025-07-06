@@ -2,27 +2,19 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import {
   Landmark,
   ShieldCheck,
   Vote,
   Quote,
-  CheckCircle,
   Instagram,
   MessageCircle,
   Scaling,
   TrendingUp,
-  GraduationCap,
-  Heart,
-  Sprout,
-  HardHat,
-  PieChart,
   ArrowRight,
-  Sparkles
 } from "lucide-react";
 import { incData } from "@/lib/inc-data";
 
@@ -50,13 +42,6 @@ const testimonials = [
   }
 ];
 
-const achievements = [
-  "Spearheaded the 'Clean Anaikattu' initiative, improving local sanitation.",
-  "Successfully campaigned for the upgradation of the district primary school.",
-  "Organized free health camps, benefiting over 5000 residents.",
-  "Secured funding for new irrigation channels for local farmers."
-];
-
 const instaPosts = [
   { imageUrl: "https://placehold.co/400x400.png", hint: "leader interacting crowd" },
   { imageUrl: "https://placehold.co/400x400.png", hint: "social service activity" },
@@ -72,16 +57,8 @@ const principleIcons: { [key: string]: React.ReactNode } = {
   "Progressivism": <TrendingUp className="h-8 w-8 text-primary" />,
 };
 
-const pillarIcons: { [key: string]: React.ReactNode } = {
-  "Yuva Nyay (Youth Justice)": <GraduationCap className="h-6 w-6 text-primary" />,
-  "Naari Nyay (Women Justice)": <Heart className="h-6 w-6 text-primary" />,
-  "Kisaan Nyay (Farmers Justice)": <Sprout className="h-6 w-6 text-primary" />,
-  "Shramik Nyay (Workers Justice)": <HardHat className="h-6 w-6 text-primary" />,
-  "Hissedari Nyay (Equity Justice)": <PieChart className="h-6 w-6 text-primary" />,
-};
-
 export default function Home() {
-  const { Ideology, Principles, Policies } = incData.IndianNationalCongress;
+  const { Ideology, Principles } = incData.IndianNationalCongress;
 
   return (
     <div className="flex flex-col bg-background overflow-x-hidden">
@@ -201,62 +178,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Nyay Patra Section */}
-      <section id="nyay-patra" className="w-full py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-6xl">{Policies.Manifesto}</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
-              Our solemn promise to the people of India, built on five pillars of justice.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {Policies.PillarsOfJustice.map((pillar, index) => (
-                <AccordionItem key={pillar.Name} value={`item-${index}`} className="glass-effect border-0 rounded-xl shadow-lg overflow-hidden">
-                  <AccordionTrigger className="p-6 text-left hover:no-underline">
-                    <div className="flex items-center gap-4">
-                      {pillarIcons[pillar.Name]}
-                      <span className="font-headline text-xl text-foreground">{pillar.Name}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                     <ul className="space-y-4 pt-4 border-t border-white/10">
-                      {pillar.Policies.map((policy, pIndex) => (
-                        <li key={pIndex} className="flex items-start gap-4">
-                          <CheckCircle className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
-                          <span className="text-base text-muted-foreground text-balance">{policy}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
-      
-      {/* Achievements Section */}
-      <section id="achievements" className="w-full py-24 lg:py-32 bg-muted/30">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-6xl">My Work for Anaikkattu</h2>
-            <p className="mt-6 text-lg text-muted-foreground text-balance">Key accomplishments and community milestones.</p>
-          </div>
-          <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2">
-            {achievements.map((item, index) => (
-              <div key={index} className="flex items-start gap-6 p-6 rounded-2xl glass-effect border-0 shadow-lg transition-all hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
-                <div className="flex-shrink-0 mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50">
-                  <CheckCircle className="h-7 w-7 text-green-600 dark:text-green-400" />
-                </div>
-                <p className="text-lg text-foreground text-balance">{item}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
