@@ -261,84 +261,90 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Community Section */}
-      <section id="community" className="w-full py-24 lg:py-32 bg-background">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-secondary mb-8">
-                Voices of Support
-              </h2>
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-4">
-                  {testimonials.map((testimonial, index) => (
-                    <CarouselItem key={index} className="pl-4 basis-full md:basis-1/1">
-                        <Card className="rounded-xl shadow-md overflow-hidden h-full bg-card border">
-                           <CardContent className="p-6 text-lg font-body relative flex flex-col justify-between min-h-[280px]">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="font-headline text-4xl font-bold tracking-tight text-secondary sm:text-6xl">Voices of Support</h2>
+            <p className="mt-6 text-lg text-muted-foreground text-balance">Hear from members of our community.</p>
+          </div>
+          <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-full">
+                      <Card className="rounded-xl shadow-md overflow-hidden h-full bg-card border">
+                          <CardContent className="p-6 text-lg font-body relative flex flex-col justify-between min-h-[280px]">
+                          <div>
+                            <span className="absolute top-2 left-4 font-serif text-8xl text-primary opacity-10 select-none">”</span>
+                            <p className="relative z-10 text-muted-foreground text-base md:text-lg text-balance pt-10">
+                              {testimonial.quote}
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-4 mt-6">
+                            <Avatar className="h-12 w-12 border-2 border-primary">
+                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                            </Avatar>
                             <div>
-                              <span className="absolute top-2 left-4 font-serif text-8xl text-primary opacity-10 select-none">”</span>
-                              <p className="relative z-10 text-muted-foreground text-base md:text-lg text-balance pt-10">
-                                {testimonial.quote}
-                              </p>
+                              <p className="font-bold text-md text-secondary">{testimonial.name}</p>
+                              <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                             </div>
-                            <div className="flex items-center gap-4 mt-6">
-                              <Avatar className="h-12 w-12 border-2 border-primary">
-                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
-                                <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                              </Avatar>
-                              <div>
-                                <p className="font-bold text-md text-secondary">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                              </div>
-                            </div>
-                           </CardContent>
-                         </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
-            </div>
-            
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-8">Connect With Us</h2>
-              <div className="grid grid-cols-2 gap-4">
-                {instaPosts.map((post, index) => (
-                  <Link href="https://www.instagram.com/" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
-                    <Image
-                      src={post.imageUrl}
-                      data-ai-hint={post.hint}
-                      alt={`Instagram post ${index + 1}`}
-                      fill
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Instagram className="h-8 w-8" />
-                    </div>
-                  </Link>
+                          </div>
+                          </CardContent>
+                        </Card>
+                  </CarouselItem>
                 ))}
-              </div>
-              <div className="mt-6 text-center">
-                    <h3 className="font-headline text-secondary text-lg">Follow Our Journey</h3>
-                    <p className="text-muted-foreground mt-1 mb-3 text-sm text-balance">Stay updated with the latest news and events.</p>
-                     <Button asChild variant="outline">
-                      <Link href="https://www.instagram.com/" target="_blank">
-                        <Instagram className="mr-2 h-4 w-4" />
-                        @Arunkumar_INC
-                      </Link>
-                    </Button>
-                </div>
-            </div>
+              </CarouselContent>
+              <CarouselPrevious className="left-[-50px]" />
+              <CarouselNext className="right-[-50px]" />
+            </Carousel>
           </div>
         </div>
       </section>
+
+      {/* Connect Section */}
+      <section id="connect" className="w-full py-24 lg:py-32 bg-muted/30">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-6xl">Connect With Us</h2>
+              <p className="mt-6 text-lg text-muted-foreground text-balance">Follow our journey and stay updated on the latest news and events.</p>
+          </div>
+          <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {instaPosts.map((post, index) => (
+                    <Link href="https://www.instagram.com/" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
+                      <Image
+                        src={post.imageUrl}
+                        data-ai-hint={post.hint}
+                        alt={`Instagram post ${index + 1}`}
+                        fill
+                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Instagram className="h-8 w-8" />
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+              <div className="mt-8 text-center">
+                   <Button asChild variant="outline" size="lg">
+                    <Link href="https://www.instagram.com/" target="_blank">
+                      <Instagram className="mr-2 h-5 w-5" />
+                      Follow @Arunkumar_INC
+                    </Link>
+                  </Button>
+              </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
