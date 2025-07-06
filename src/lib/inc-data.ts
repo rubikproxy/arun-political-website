@@ -152,5 +152,77 @@ export const incData = {
       ],
       "Source": "Nyay Patra | Manifesto | Lok Sabha Elections 2024 (https://manifesto.inc.in/), Congress Manifesto English 2024 (https://manifesto.inc.in/assets/Congress-Manifesto-English-2024-Dyoxp_4E.pdf)"
     }
+  },
+  "homePage": {
+    "hero": {
+      "image": "https://inc.in/static/images/home/banner-7-web.png",
+      "headline": "A New Vision for India",
+      "subheading": {
+        "part1": "Under the leadership of ",
+        "highlight": "Rahul Gandhi",
+        "part2": ", positioned to guide India into its next chapter, the Indian National Congress champions a future of justice, equality, and prosperity for all."
+      },
+      "buttons": {
+        "primary": "Explore Our Mission",
+        "secondary": "Get Involved"
+      }
+    },
+    "leaderProfile": {
+      "image": "https://i.imgur.com/Y1hTTxE.jpeg",
+      "imageHint": "male indian politician",
+      "subtitle": "Voice in Vellore",
+      "name": "Arunkumar Arangavelan",
+      "title": "Youth Wing Leader Of Anaikattu",
+      "description": "Arunkumar Arangavelan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.",
+      "buttons": {
+        "contact": "Contact Me",
+        "instagram": "Follow on Instagram"
+      },
+      "instagramUrl": "https://www.instagram.com/arunkumar_arangavelan_inc"
+    },
+    "vision": {
+      "headline": "Our Vision for a Just India",
+      "subheading": "Rooted in a legacy of service, the Indian National Congress is committed to building an equitable and prosperous future for every citizen.",
+      "principlesHeadline": "Founding Principles"
+    },
+    "testimonials": {
+      "headline": "Voices of Support",
+      "subheading": "Hear from members of our community.",
+      "list": [
+        {
+          "name": "Priya S.",
+          "location": "Vellore",
+          "quote": "The Congress party has always stood for the unity and integrity of our nation. We need their experience to guide us.",
+          "avatar": "https://placehold.co/100x100.png",
+          "avatarHint": "indian woman"
+        },
+        {
+          "name": "Amit Kumar",
+          "location": "Anaikattu",
+          "quote": "Arunkumar ji's work in our thoguthi is commendable. He is always accessible and works tirelessly for our welfare.",
+          "avatar": "https://placehold.co/100x100.png",
+          "avatarHint": "indian man"
+        },
+        {
+          "name": "Fatima B.",
+          "location": "Gudiyatham",
+          "quote": "Rahul Gandhi's vision for an inclusive India gives me hope for a better, more harmonious future for my children.",
+          "avatar": "https://placehold.co/100x100.png",
+          "avatarHint": "indian woman professional"
+        }
+      ]
+    },
+    "connect": {
+      "headline": "Connect With Us",
+      "subheading": "Follow our journey and stay updated on the latest news and events.",
+      "instagramUrl": "https://www.instagram.com/arunkumar_arangavelan_inc",
+      "buttonText": "Follow @arunkumar_arangavelan_inc",
+      "posts": [
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "leader interacting crowd" },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "social service activity" },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "inaugurating project" },
+        { "imageUrl": "https://placehold.co/400x400.png", "hint": "public rally speech" }
+      ]
+    }
   }
 };
