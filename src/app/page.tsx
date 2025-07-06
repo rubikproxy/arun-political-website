@@ -156,13 +156,17 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="mb-20 shadow-xl glass-effect border-0 rounded-2xl overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <CardContent className="text-center text-xl md:text-2xl text-foreground relative p-10 md:p-16">
-              <Quote className="absolute top-6 left-8 h-16 w-16 text-primary/20" />
-              <p className="italic text-balance">"{Principles.Objective}"</p>
-              <Quote className="absolute bottom-6 right-8 h-16 w-16 text-primary/20 transform rotate-180" />
-            </CardContent>
-          </Card>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Card className="mb-20 shadow-xl bg-card rounded-2xl overflow-hidden">
+                <CardContent className="relative text-center text-lg md:text-xl text-foreground p-10 md:p-16">
+                    <span className="absolute -top-2 left-8 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">“</span>
+                    <p className="relative z-10 text-balance max-w-4xl mx-auto">
+                        {Principles.Objective}
+                    </p>
+                    <span className="absolute -bottom-12 right-8 font-headline text-9xl text-primary/20 select-none" aria-hidden="true">”</span>
+                </CardContent>
+            </Card>
+          </div>
 
           <div id="values" className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h3 className="font-headline text-3xl font-bold text-center text-primary mb-12">Founding Principles</h3>
