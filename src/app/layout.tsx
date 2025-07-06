@@ -78,9 +78,63 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const noscriptStyles = `
+    body { overflow: hidden; }
+    .noscript-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      text-align: center;
+      padding: 1rem;
+    }
+    .noscript-content {
+      border: 1px solid #FF9933;
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      background: rgba(40, 40, 40, 0.7);
+      max-width: 600px;
+    }
+    .noscript-content h1 {
+      font-family: Georgia, serif;
+      font-size: 2.25rem;
+      color: #FF9933;
+      margin-bottom: 1.5rem;
+    }
+    .noscript-content p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .noscript-content a {
+      color: #FF9933;
+      text-decoration: underline;
+    }
+  `;
   return (
     <html lang="en" className={`!scroll-smooth scroll-pt-20 ${poppins.variable} ${merriweather.variable}`}>
       <body className="font-body antialiased">
+        <noscript>
+          <style dangerouslySetInnerHTML={{ __html: noscriptStyles }} />
+          <div className="noscript-overlay">
+            <div className="noscript-content">
+              <h1>JavaScript Required</h1>
+              <p>
+                This site is highly interactive and requires JavaScript to function correctly. For the best experience, please enable JavaScript in your browser.
+              </p>
+              <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">
+                Learn How
+              </a>
+            </div>
+          </div>
+        </noscript>
         <div className="relative flex min-h-dvh flex-col bg-background">
           <div 
             className="absolute inset-0 z-[-1] opacity-70" 

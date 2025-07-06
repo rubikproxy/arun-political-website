@@ -202,7 +202,7 @@ export const incData = {
           "name": "Kumara Guru",
           "location": "Vellore",
           "quote": "Arunkumar ji's work in our constituency is commendable. He is always accessible and works tirelessly for our welfare.",
-          "avatar": "https://placehold.co/100x100.png",
+          "avatar": "https://ik.imagekit.io/rubikproxy/tr:w-100,h-100/arunkumar/WhatsApp%20Image%202025-07-06%20at%2017.46.27_4cfdb65f.jpg",
           "avatarAlt": "Kumara Guru",
           "avatarHint": "indian man"
         },
@@ -210,7 +210,7 @@ export const incData = {
           "name": "Yuvraj",
           "location": "Vellore",
           "quote": "Rahul Gandhi's vision for an inclusive India gives me hope for a better, more harmonious future for my children.",
-          "avatar": "https://placehold.co/100x100.png",
+          "avatar": "https://ik.imagekit.io/rubikproxy/tr:w-100,h-100/arunkumar/WhatsApp%20Image%202025-07-06%20at%2017.32.00_b597cd7c.jpg",
           "avatarAlt": "Yuvraj",
           "avatarHint": "indian woman professional"
         }
