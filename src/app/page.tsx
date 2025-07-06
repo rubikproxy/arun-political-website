@@ -16,7 +16,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { incData } from "@/lib/inc-data";
-import { LeaderProfileSlider } from "./leader-profile-slider";
 
 const testimonials = [
   {
@@ -103,9 +102,20 @@ export default function Home() {
       <section id="leader-profile" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative animate-fade-in-up max-w-md mx-auto" style={{ animationDelay: '0.2s' }}>
                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-full blur-3xl opacity-50"></div>
-               <LeaderProfileSlider />
+                <Card>
+                  <CardContent className="relative flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
+                    <Image
+                      src="https://i.imgur.com/R2OOBGQ.jpeg"
+                      data-ai-hint="male indian politician"
+                      alt="Arunkumar Arangavalan"
+                      width={800}
+                      height={800}
+                      className="object-cover object-top w-full h-full"
+                    />
+                  </CardContent>
+                </Card>
             </div>
             <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-primary font-bold tracking-widest uppercase">Voice in Vellore</p>
