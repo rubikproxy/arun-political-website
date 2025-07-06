@@ -81,7 +81,7 @@ export default function Home() {
               A New Vision for India
             </h1>
             <p className="max-w-2xl mx-auto mt-6 text-lg md:text-xl lg:text-2xl text-neutral-200 text-balance">
-              Under the leadership of <span className="font-bold text-white">Rahul Gandhi</span>, the Indian National Congress champions a future of justice, equality, and prosperity for all.
+              Under the leadership of <span className="font-bold text-white">Rahul Gandhi</span>, positioned to guide India into its next chapter, the Indian National Congress champions a future of justice, equality, and prosperity for all.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
               <Button asChild size="lg" className="text-lg bg-gradient-to-r from-primary to-orange-400 text-primary-foreground shadow-lg shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/50">
@@ -123,10 +123,10 @@ export default function Home() {
                 Arunkumar Arangavalan
               </h2>
               <p className="text-lg font-semibold text-primary/90">
-                National Congress Youth Wing Leader, Anaikkattu Constituency
+                Youth Wing Leader Of Anaikattu
               </p>
               <p className="text-lg text-muted-foreground max-w-xl text-balance">
-                Inspired by the leadership of Rahul Gandhi and the core principles of the Indian National Congress, Arunkumar is a dedicated public servant. As the Youth Wing Leader for the Anaikkattu constituency, he champions the party's ideology of social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.
+                Arunkumar Arangavalan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild>
