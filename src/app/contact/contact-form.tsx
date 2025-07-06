@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -11,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -20,9 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { submitContactForm, type FormState } from "./actions";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { CheckCircle2, AlertTriangle } from "lucide-react";
+import { CheckCircle2, AlertTriangle, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,21 +33,22 @@ const formSchema = z.object({
   }),
 });
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full" size="lg">
-      {pending ? "Submitting..." : "Send Message"}
-    </Button>
-  );
-}
+type FormData = z.infer<typeof formSchema>;
+
+type FormSubmissionState = {
+  message: string;
+  success: boolean | null;
+  isSubmitting: boolean;
+};
 
 export function ContactForm() {
-  const initialState: FormState = { message: "", success: false };
-  const [state, formAction] = useActionState(submitContactForm, initialState);
-  const formRef = React.useRef<HTMLFormElement>(null);
+  const [submissionState, setSubmissionState] = useState<FormSubmissionState>({
+    message: "",
+    success: null,
+    isSubmitting: false,
+  });
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -59,12 +57,39 @@ export function ContactForm() {
     },
   });
 
-  React.useEffect(() => {
-    if (state.success) {
-      form.reset();
-      formRef.current?.reset();
+  async function onSubmit(data: FormData) {
+    setSubmissionState({ message: "", success: null, isSubmitting: true });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xblyezna", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmissionState({
+          message: "Thank you for your message! We will get back to you soon.",
+          success: true,
+          isSubmitting: false,
+        });
+        form.reset();
+      } else {
+        const result = await response.json();
+        const errorMessage = result.errors?.map((e: any) => e.message).join(", ") || "Something went wrong. Please try again.";
+        setSubmissionState({ message: errorMessage, success: false, isSubmitting: false });
+      }
+    } catch (error) {
+      setSubmissionState({
+        message: "Something went wrong. Please try again later.",
+        success: false,
+        isSubmitting: false,
+      });
     }
-  }, [state.success, form]);
+  }
 
   return (
     <Card className="shadow-2xl">
@@ -77,8 +102,7 @@ export function ContactForm() {
       <CardContent>
         <Form {...form}>
           <form
-            ref={formRef}
-            action={formAction}
+            onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-6"
           >
             <FormField
@@ -126,15 +150,24 @@ export function ContactForm() {
               )}
             />
             
-            {state.message && (
-              <Alert variant={state.success ? "default" : "destructive"}>
-                {state.success ? <CheckCircle2 className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}
-                <AlertTitle>{state.success ? "Success" : "Error"}</AlertTitle>
-                <AlertDescription>{state.message}</AlertDescription>
+            {submissionState.message && (
+              <Alert variant={submissionState.success === true ? "default" : "destructive"}>
+                {submissionState.success === true ? <CheckCircle2 className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}
+                <AlertTitle>{submissionState.success === true ? "Success" : "Error"}</AlertTitle>
+                <AlertDescription>{submissionState.message}</AlertDescription>
               </Alert>
             )}
 
-            <SubmitButton />
+            <Button type="submit" disabled={submissionState.isSubmitting} className="w-full" size="lg">
+              {submissionState.isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                "Send Message"
+              )}
+            </Button>
           </form>
         </Form>
       </CardContent>

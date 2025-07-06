@@ -168,7 +168,7 @@ export const incData = {
       }
     },
     "leaderProfile": {
-      "image": "https://i.imgur.com/Y1hTTxE.jpeg",
+      "image": "https://ik.imagekit.io/rubikproxy/arunkumar/IMG-20220227-WA0011.jpg",
       "imageAlt": "Headshot of Arunkumar Arangavelan, INC Youth Wing Leader of Anaikattu.",
       "imageHint": "male indian politician",
       "subtitle": "Voice in Vellore",
@@ -191,27 +191,27 @@ export const incData = {
       "subheading": "Hear from members of our community.",
       "list": [
         {
-          "name": "Priya S.",
+          "name": "SANJAY KUMAR V",
           "location": "Vellore",
           "quote": "The Congress party has always stood for the unity and integrity of our nation. We need their experience to guide us.",
-          "avatar": "https://placehold.co/100x100.png",
-          "avatarAlt": "Avatar of Priya S.",
+          "avatar": "https://ik.imagekit.io/rubikproxy/tr:w-100,h-100/vinsanjay.me/MY%20IMAGE/rubikproxy1.jpg",
+          "avatarAlt": "SANJY KUMAR V",
           "avatarHint": "indian woman"
         },
         {
-          "name": "Amit Kumar",
-          "location": "Anaikattu",
-          "quote": "Arunkumar ji's work in our thoguthi is commendable. He is always accessible and works tirelessly for our welfare.",
+          "name": "Kumara Guru",
+          "location": "Vellore",
+          "quote": "Arunkumar ji's work in our constituency is commendable. He is always accessible and works tirelessly for our welfare.",
           "avatar": "https://placehold.co/100x100.png",
-          "avatarAlt": "Avatar of Amit Kumar.",
+          "avatarAlt": "Kumara Guru",
           "avatarHint": "indian man"
         },
         {
-          "name": "Fatima B.",
-          "location": "Gudiyatham",
+          "name": "Yuvraj",
+          "location": "Vellore",
           "quote": "Rahul Gandhi's vision for an inclusive India gives me hope for a better, more harmonious future for my children.",
           "avatar": "https://placehold.co/100x100.png",
-          "avatarAlt": "Avatar of Fatima B.",
+          "avatarAlt": "Yuvraj",
           "avatarHint": "indian woman professional"
         }
       ]
@@ -222,10 +222,8 @@ export const incData = {
       "instagramUrl": "https://www.instagram.com/arunkumar_arangavelan_inc",
       "buttonText": "Follow @arunkumar_arangavelan_inc",
       "posts": [
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "leader interacting crowd", "alt": "Arunkumar Arangavelan speaking with a crowd of supporters." },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "social service activity", "alt": "Arunkumar Arangavelan participating in a local social service event." },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "inaugurating project", "alt": "Arunkumar Arangavelan at a project inauguration ceremony in Anaikattu." },
-        { "imageUrl": "https://placehold.co/400x400.png", "hint": "public rally speech", "alt": "Arunkumar Arangavelan delivering a speech at a public rally." }
+        { "imageUrl": "https://ik.imagekit.io/rubikproxy/tr:w-400,h-400/arunkumar/new.jpg", "hint": "leader interacting crowd", "alt": "Arunkumar Arangavelan speaking with a crowd of supporters." },
+        { "imageUrl": "https://ik.imagekit.io/rubikproxy/tr:w-400,h-400/arunkumar/news.jpg", "hint": "social service activity", "alt": "Arunkumar Arangavelan participating in a local social service event." },
       ]
     }
   }

@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.imgur.com',
+        hostname: 'ik.imagekit.io',
         port: '',
         pathname: '/**',
       }
