@@ -1,5 +1,4 @@
 import { ContactForm } from "./contact-form";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -14,45 +13,8 @@ export default function ContactPage() {
           </p>
         </section>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-8">
-            <div>
-              <h2 className="font-headline text-3xl text-primary font-bold">Contact Information</h2>
-              <p className="text-muted-foreground mt-2">We're here to listen. Reach out to us through any of the channels below.</p>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Office Address</h3>
-                  <p className="text-muted-foreground">Anaikattu Thoguthi Office, Vellore District, Tamil Nadu</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Email Us</h3>
-                  <a href="mailto:contact@arunkumar.inc" className="text-muted-foreground hover:text-primary transition-colors">contact@arunkumar.inc</a>
-                </div>
-              </div>
-               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Call Us</h3>
-                  <p className="text-muted-foreground">Mon-Fri from 9am to 5pm.</p>
-                  <a href="tel:+91-000-000-0000" className="text-muted-foreground hover:text-primary transition-colors">+91-000-000-0000</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:pt-0">
+        <div className="flex justify-center">
+          <div className="w-full max-w-2xl">
             <ContactForm />
           </div>
         </div>
