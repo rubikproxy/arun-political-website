@@ -1,4 +1,4 @@
-# Arunkumar Arangavelan - INC Leader, Vellore
+# Arunkumar Arangavelan - INC Leader, Vellores
 
 This is a Next.js website for Arunkumar Arangavelan, the Indian National Congress party leader for Vellore District, Anaikkattu Thoguthi. The site is built with Firebase Studio.
 
