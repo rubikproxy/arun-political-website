@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import {
   Landmark,
   ShieldCheck,
@@ -183,55 +182,37 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="w-full py-24 lg:py-32 bg-background">
+      <section id="testimonials" className="w-full py-24 lg:py-32 bg-muted/30">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-secondary sm:text-6xl">Voices of Support</h2>
             <p className="mt-6 text-lg text-muted-foreground text-balance">Hear from members of our community.</p>
           </div>
-          <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4">
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-4 basis-full">
-                      <Card className="rounded-xl shadow-md overflow-hidden h-full bg-card border">
-                          <CardContent className="p-6 text-lg font-body relative flex flex-col justify-between min-h-[280px]">
-                          <div>
-                            <span className="absolute top-2 left-4 font-serif text-8xl text-primary opacity-10 select-none">”</span>
-                            <p className="relative z-10 text-muted-foreground text-base md:text-lg text-balance pt-10">
-                              {testimonial.quote}
-                            </p>
-                          </div>
-                          <div className="flex items-center gap-4 mt-6">
-                            <Avatar className="h-12 w-12 border-2 border-primary">
-                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
-                              <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                            </Avatar>
-                            <div>
-                              <p className="font-bold text-md text-secondary">{testimonial.name}</p>
-                              <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                            </div>
-                          </div>
-                          </CardContent>
-                        </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-[-50px]" />
-              <CarouselNext className="right-[-50px]" />
-            </Carousel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="flex flex-col bg-background p-8 rounded-2xl shadow-xl hover:shadow-primary/20 transition-all duration-300 h-full transform hover:-translate-y-2 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
+                <Quote className="h-10 w-10 text-primary/80 mb-6" />
+                <p className="text-lg text-foreground/90 flex-grow text-balance mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-foreground/10">
+                  <Avatar className="h-14 w-14 border-2 border-primary">
+                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                    <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="font-bold text-lg text-secondary">{testimonial.name}</p>
+                    <p className="text-md text-muted-foreground">{testimonial.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Connect Section */}
-      <section id="connect" className="w-full py-24 lg:py-32 bg-muted/30">
+      <section id="connect" className="w-full py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 animate-fade-in-up">
               <h2 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-6xl">Connect With Us</h2>
