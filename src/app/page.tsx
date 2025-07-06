@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import { preload } from "react-dom";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,6 +30,8 @@ export default function Home() {
   const { IndianNationalCongress, homePage } = incData;
   const { Ideology, Principles } = IndianNationalCongress;
   const { hero, leaderProfile, vision, testimonials, connect } = homePage;
+
+  preload(leaderProfile.image, { as: "image" });
 
   return (
     <div className="flex flex-col bg-background overflow-x-hidden">
@@ -84,6 +87,8 @@ export default function Home() {
                     alt={leaderProfile.imageAlt}
                     width={800}
                     height={800}
+                    loading="lazy"
+                    sizes="(max-width: 480px) 90vw, 448px"
                     className="object-cover object-top w-full h-full"
                   />
                 </div>
