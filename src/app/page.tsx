@@ -104,8 +104,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative animate-fade-in-up max-w-md mx-auto" style={{ animationDelay: '0.2s' }}>
                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-full blur-3xl opacity-50"></div>
-                <Card>
-                  <CardContent className="relative flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
+                <Card className="rounded-full shadow-2xl border-4 border-primary/20">
+                  <CardContent className="relative flex aspect-square items-center justify-center p-0 overflow-hidden rounded-full">
                     <Image
                       src="https://i.imgur.com/R2OOBGQ.jpeg"
                       data-ai-hint="male indian politician"
