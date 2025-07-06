@@ -11,7 +11,7 @@ export default function Header() {
         <Link href="/" className="flex items-center space-x-2">
           <Icons.IncLogo className="h-12 w-auto" />
           <div className="flex flex-col">
-            <span className="font-bold font-headline text-primary">Arunkumar Arangavalan</span>
+            <span className="font-bold font-headline text-primary">Arunkumar Arangavelan</span>
             <span className="text-xs text-muted-foreground">Youth Wing Leader, Anaikattu</span>
           </div>
         </Link>

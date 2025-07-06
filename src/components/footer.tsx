@@ -57,7 +57,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
            <p>
-            &copy; {new Date().getFullYear()} Arunkumar Arangavalan. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Arunkumar Arangavelan. All Rights Reserved.
           </p>
         </div>
       </div>

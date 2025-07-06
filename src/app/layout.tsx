@@ -6,10 +6,10 @@ import Footer from '@/components/footer';
 import { Icons } from '@/components/icons';
 
 export const metadata: Metadata = {
-  title: 'Arunkumar Arangavalan (ArunKumar Arangavelan) | Youth Wing Leader, Anaikattu',
-  description: 'Official website of Arunkumar Arangavalan, the National Congress Youth Wing Leader for the Anaikkattu constituency in Vellore. Connect and support the vision for a progressive future.',
+  title: 'Arunkumar Arangavelan | Youth Wing Leader, Anaikattu',
+  description: 'Official website of Arunkumar Arangavelan, the National Congress Youth Wing Leader for the Anaikkattu constituency in Vellore. Connect and support the vision for a progressive future.',
   keywords: [
-    "Arunkumar Arangavalan",
+    "Arunkumar Arangavelan",
     "ArunKumar Arangavelan",
     "Indian National Congress",
     "INC",

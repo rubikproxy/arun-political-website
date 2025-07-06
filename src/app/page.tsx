@@ -109,7 +109,7 @@ export default function Home() {
                   <Image
                     src="https://i.imgur.com/Y1hTTxE.jpeg"
                     data-ai-hint="male indian politician"
-                    alt="Arunkumar Arangavalan"
+                    alt="Arunkumar Arangavelan"
                     width={800}
                     height={800}
                     className="object-cover object-top w-full h-full"
@@ -120,13 +120,13 @@ export default function Home() {
             <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-primary font-bold tracking-widest uppercase">Voice in Vellore</p>
               <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-secondary">
-                Arunkumar Arangavalan
+                Arunkumar Arangavelan
               </h2>
               <p className="text-lg font-semibold text-primary/90">
                 Youth Wing Leader Of Anaikattu
               </p>
               <p className="text-lg text-muted-foreground max-w-xl text-balance">
-                Arunkumar Arangavalan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.
+                Arunkumar Arangavelan is a dedicated public servant, deeply inspired by the leadership of Rahul Gandhi and the Indian National Congress's core ideology, principles, and policies. As the Youth Wing Leader for the Anaikattu constituency, he champions social justice, progress, and equality, working tirelessly to empower youth and ensure every voice in the community is heard.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild>
@@ -136,7 +136,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank">
+                  <Link href="https://www.instagram.com/arunkumar_arangavelan_inc" target="_blank">
                     <Instagram />
                     Follow on Instagram
                   </Link>
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {instaPosts.map((post, index) => (
-                    <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
+                    <Link href="https://www.instagram.com/arunkumar_arangavelan_inc" target="_blank" key={index} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
                       <Image
                         src={post.imageUrl}
                         data-ai-hint={post.hint}
@@ -244,9 +244,9 @@ export default function Home() {
               </div>
               <div className="mt-8 text-center">
                    <Button asChild variant="outline" size="lg">
-                    <Link href="https://www.instagram.com/arunkumar_arangavalan_inc" target="_blank">
+                    <Link href="https://www.instagram.com/arunkumar_arangavelan_inc" target="_blank">
                       <Instagram className="mr-2 h-5 w-5" />
-                      Follow @arunkumar_arangavalan_inc
+                      Follow @arunkumar_arangavelan_inc
                     </Link>
                   </Button>
               </div>
