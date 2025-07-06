@@ -103,17 +103,19 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative animate-fade-in-up max-w-md mx-auto" style={{ animationDelay: '0.2s' }}>
-               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/30 rounded-[2.5rem] blur-3xl opacity-50"></div>
-                <div className="relative aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl border-2 border-white/10">
-                    <Image
-                      src="https://i.imgur.com/Y1hTTxE.jpeg"
-                      data-ai-hint="male indian politician"
-                      alt="Arunkumar Arangavalan"
-                      width={800}
-                      height={800}
-                      className="object-cover object-top w-full h-full"
-                    />
+              {/* The outer div creates the tri-color border using a gradient and padding */}
+              <div className="relative p-1.5 rounded-[2.5rem] bg-gradient-to-b from-primary via-white to-secondary shadow-2xl shadow-primary/40">
+                <div className="relative aspect-square overflow-hidden rounded-[2.15rem]">
+                  <Image
+                    src="https://i.imgur.com/Y1hTTxE.jpeg"
+                    data-ai-hint="male indian politician"
+                    alt="Arunkumar Arangavalan"
+                    width={800}
+                    height={800}
+                    className="object-cover object-top w-full h-full"
+                  />
                 </div>
+              </div>
             </div>
             <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-primary font-bold tracking-widest uppercase">Voice in Vellore</p>
